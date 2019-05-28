@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <style>
+        .index{
+            position: relative;
+            width:500px;
+            height:500px;
+            overflow: hidden;
+        }
+        .index img{
+            width:100%;
+            height:100%;
+        }
+
+        .animated{
+            -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+        }
+        .img2{
+            position: absolute;
+            left:0;
+            top:0;
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+        }
+        @-webkit-keyframes fadeOut {
+           0%{
+                opacity: 1;
+            }
+
+            /*20% {*/
+            /*    opacity: 0.8;*/
+            /*}*/
+            /*40% {*/
+            /*    opacity: 0;*/
+            /*}*/
+            100%{
+                opacity: 0.8;
+            }
+        }
+
+        @keyframes fadeOut {
+            0%{
+                opacity: 1;
+            }
+
+            /*20% {*/
+            /*    opacity: 0.8;*/
+            /*}*/
+            /*40% {*/
+            /*    opacity: 0;*/
+            /*}*/
+            100%{
+                opacity: 0;
+            }
+        }
+
+        .fadeOut {
+            -webkit-animation-name: fadeOut;
+            animation-name: fadeOut;
+        }
+        @-webkit-keyframes fadeIn {
+            0%{
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+            40% {
+                opacity: 1;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            0%{
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+            40% {
+                opacity: 1;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+
+        .fadeIn {
+            -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+        }
+    </style>
+</head>
+<body>
+<div class="index">
+    <img src="imgs/bg2.jpg" alt="" class="animated infinite fadeIn img1 ">
+    <img src="imgs/bg2.jpg" alt="" class="animated infinite fadeOut img2 delay-3s">
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
